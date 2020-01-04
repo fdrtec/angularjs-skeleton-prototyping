@@ -1,0 +1,22 @@
+{
+  "name": "angularjs-skeleton-prototyping",
+  "version": "1.0.0",
+  "description": "Esqueleto para protipagem com angularjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fdrtec/angularjs-skeleton-prototyping.git"
+  },
+  "author": "Fabiano Dias Ramires",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fdrtec/angularjs-skeleton-prototyping/issues"
+  },
+  "homepage": "https://github.com/fdrtec/angularjs-skeleton-prototyping#readme",
+  "dependencies": {
+    "angular": "^1.7.9"
+  }
+}
