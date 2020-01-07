@@ -1,15 +1,14 @@
 const gulp = require('gulp');
-const watch =require('gulp-watch');
 const webserver = require('gulp-webserver');
 
 gulp.task('watch', () => {
-    watch('app/**/*.html', gulp.start('app.html'));
-    watch('app/**/*.css', gulp.start('app.css'));
-    watch('app/**/*.js', gulp.start('app.js'));
-    watch('app/**/*.*', gulp.start('app.assets'));
+    gulp.watch('app/**/*.html', gulp.parallel('app.html'));
+    gulp.watch('app/**/*.css', gulp.parallel('app.css'));
+    gulp.watch('app/**/*.js', gulp.parallel('app.js'));
+    gulp.watch('app/**/*.*', gulp.parallel('app.assets'));
 });
 
-gulp.task('server', ['watch'], () => {
+gulp.task('start.server', () => {
     return gulp.src('public')
         .pipe(webserver({
             livereload: true,
@@ -17,6 +16,9 @@ gulp.task('server', ['watch'], () => {
             open: true
         }));
 });
+
+gulp.task('server', gulp.series('start.server', 'watch'));
+
 
 
 

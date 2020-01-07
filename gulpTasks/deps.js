@@ -3,9 +3,7 @@ const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const uglifycss = require('gulp-uglifycss');
 
-gulp.task('deps', ['deps.js', 'deps.css', 'deps.fonts']);
-
-gulp.task('deps.js', () => {
+gulp.task('deps.js',() => {
     return gulp.src([
         'node_modules/angular/angular.min.js',
         'node_modules/angular-material/angular-material.min.js',
@@ -16,7 +14,6 @@ gulp.task('deps.js', () => {
         'node_modules/angular-toastr/dist/angular-toastr.tpls.min.js',
         'node_modules/jquery/dist/jquery.min.js',
         'node_modules/bootstrap/dist/js/bootstrap.min.js'
-
     ])
         .pipe(uglify())
         .pipe(concat('deps.min.js'))
@@ -27,8 +24,7 @@ gulp.task('deps.css', () => {
     return gulp.src([
         'node_modules/angular-toastr/dist/angular-toastr.min.css',
         'node_modules/font-awesome/css/font-awesome.min.css',
-        'node_modules/bootstrap/dist/css/bootstrap.min.css',
-
+        'node_modules/bootstrap/dist/css/bootstrap.min.css'
     ])
         .pipe(uglifycss({'uglyComments': true}))
         .pipe(concat('deps.min.css'))
@@ -41,3 +37,6 @@ gulp.task('deps.fonts', () => {
     ])
         .pipe(gulp.dest('public/assets/fonts'));
 });
+
+gulp.task('deps', gulp.series('deps.js', 'deps.css', 'deps.fonts'));
+

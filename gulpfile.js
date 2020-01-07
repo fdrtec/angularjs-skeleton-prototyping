@@ -6,7 +6,19 @@ require('./gulpTasks/app');
 require('./gulpTasks/deps');
 require('./gulpTasks/server');
 
-gulp.task('default', () => {
-    if (util.env.production) sequence('deps', 'app');
-    else sequence('deps','app','server');
-});
+if (util.env.production) {
+    gulp.task('default', gulp.series('deps', 'app'));
+} else {
+    gulp.task('default', gulp.series('deps','app','server'))
+}
+
+
+
+
+
+
+
+
+//gulp.task('default', gulp.series('deps','app', 'server'));
+
+

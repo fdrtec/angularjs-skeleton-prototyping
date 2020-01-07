@@ -5,9 +5,7 @@ const uglifycss = require('gulp-uglifycss');
 const concat = require('gulp-concat');
 const babel = require('gulp-babel');
 
-gulp.task('app', ['app.html', 'app.css', 'app.js', 'app.assets']);
-
-gulp.task('app.html', () => {
+gulp.task('app.html',() => {
     return gulp.src('app/**/*.html')
         .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest('public'));
@@ -32,3 +30,6 @@ gulp.task('app.assets', () => {
     return gulp.src('assets/**/*.*')
         .pipe(gulp.src('public/assets'));
 });
+
+gulp.task('app', gulp.series('app.html', 'app.css', 'app.js', 'app.assets'));
+
