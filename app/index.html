@@ -6,76 +6,115 @@
 		<link rel="stylesheet" href="assets/css/deps.min.css">
 		<link rel="stylesheet" href="assets/css/app.min.css"/>
 		<style>
-
 			.wrapper {
 				display: grid;
 				grid-template-columns: 1fr;
-				grid-template-rows: repeat(3, minmax(100px, auto));
-				/*grid-auto-rows: 200px;*/
-				/*place-items: start center;*/
-				grid-gap: 1rem;
+				grid-gap: .5em;
+				height: 100vh;
+				grid-template-areas: "header" "main" "sidebar" "aside-main" "aside-sec" "footer"
 			}
 
-			@media(min-width: 768px) {
+			@media (min-width: 768px) {
 				.wrapper {
-				grid-template-columns: repeat(5, 1fr);
+					grid-template-columns: repeat(6, 1fr);
+					grid-template-rows: .5fr 2fr .5fr .5fr .5fr;
+					grid-template-areas: "header header     header     header    header    header" ".      main       main       main      sidebar   ." ".      aside-main aside-main aside-sec aside-sec ." "footer footer     footer     footer    footer    footer"
 				}
 			}
 
-			.wrapper div {
-				background-color: royalblue;
-				padding: 1rem;
-			}
 
-			.wrapper div:nth-child(1) {
-				grid-column: 1 / -1;
-				height: 200px;
-			}
-
-			.wrapper div:nth-child(2) {
-				grid-column: 1;
-				height: 300px;
-			}
-
-			.wrapper div:nth-child(3) {
-				grid-column: 1;
-				height: 300px;
-			}
-
-			@media(min-width: 768px) {
-				.wrapper div:nth-child(3){
-					grid-column: 2 / 5
-				}
-			}
-
-			.wrapper div:nth-child(5) {
-				grid-column: 1 / -1;
-				height: 100px;
-			}
-
-
-			.wrapper div:nth-child(even) {
+			.header {
 				background-color: skyblue;
+				grid-area: header;
 			}
+
+			.main {
+				background-color: coral;
+				grid-area: main;
+			}
+
+			.sidebar {
+				background-color: royalblue;
+				grid-area: sidebar;
+			}
+
+			.aside-main {
+				background-color: purple;
+				grid-area: aside-main;
+			}
+
+			.aside-sec {
+				background-color: purple;
+				grid-area: aside-sec;
+			}
+
+			.footer {
+				background-color: lightgreen;
+				grid-area: footer;
+			}
+
+			/*.wrapper {*/
+			/*	display: grid;*/
+			/*	grid-template-columns: 1fr;*/
+			/*	grid-template-rows: repeat(3, minmax(100px, auto));*/
+			/*	!*grid-auto-rows: 200px;*!*/
+			/*	!*place-items: start center;*!*/
+			/*	grid-gap: 1rem;*/
+			/*}*/
+
+			/*@media(min-width: 768px) {*/
+			/*	.wrapper {*/
+			/*	grid-template-columns: repeat(5, 1fr);*/
+			/*	}*/
+			/*}*/
+
+			/*.wrapper div {*/
+			/*	background-color: royalblue;*/
+			/*	padding: 1rem;*/
+			/*}*/
+
+			/*.wrapper div:nth-child(1) {*/
+			/*	grid-column: 1 / -1;*/
+			/*	height: 200px;*/
+			/*}*/
+
+			/*.wrapper div:nth-child(2) {*/
+			/*	grid-column: 1;*/
+			/*	height: 300px;*/
+			/*}*/
+
+			/*.wrapper div:nth-child(3) {*/
+			/*	grid-column: 1;*/
+			/*	height: 300px;*/
+			/*}*/
+
+			/*@media(min-width: 768px) {*/
+			/*	.wrapper div:nth-child(3){*/
+			/*		grid-column: 2 / 5*/
+			/*	}*/
+			/*}*/
+
+			/*.wrapper div:nth-child(5) {*/
+			/*	grid-column: 1 / -1;*/
+			/*	height: 100px;*/
+			/*}*/
+
+
+			/*.wrapper div:nth-child(even) {*/
+			/*	background-color: skyblue;*/
+			/*}*/
 
 		</style>
 	</head>
 
 	<body>
-		<!--		<header>teste</header>-->
-		<!--		<aside ng-include="'/templates/menu.html'"></aside>-->
-		<!--		<div ui-view></div>-->
-		<!--		<footer></footer>-->
-
 		<div class="wrapper">
-			<div>1</div>
-			<div>2</div>
-			<div>3</div>
-			<div>4</div>
-			<div>5</div>
-			<div>6</div>
-			<div>7</div>
-			<div>8</div>
+			<header class="header">HEADER</header>
+			<main class="main">MAIN</main>
+			<aside class="sidebar">SIDEBAR</aside>
+			<aside class="aside-main">ASIDE-MAIN</aside>
+			<aside class="aside-sec">ASIDE-SEC</aside>
+			<footer class="footer">FOOTER</footer>
 		</div>
 
 
