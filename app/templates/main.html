@@ -1,0 +1,99 @@
+<style>
+	.wrapper {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: .5em;
+		height: 100vh;
+		grid-template-areas: "header" "main" "sidebar" "aside-main" "aside-sec" "footer"
+	}
+
+	@media (min-width: 768px) {
+		.wrapper {
+			grid-template-columns: repeat(6, 1fr);
+			grid-template-rows: .5fr 2fr .5fr .5fr .5fr;
+			grid-template-areas: "header header     header     header    header    header" ".      main       main       main      sidebar   ." ".      aside-main aside-main aside-sec aside-sec ." "footer footer     footer     footer    footer    footer"
+		}
+	}
+
+	.header {
+		background-color: skyblue;
+		grid-area: header;
+	}
+
+	.main {
+		background-color: coral;
+		grid-area: main;
+	}
+
+	.sidebar {
+		background-color: royalblue;
+		grid-area: sidebar;
+	}
+
+	.aside-main {
+		background-color: purple;
+		grid-area: aside-main;
+	}
+
+	.aside-sec {
+		background-color: purple;
+		grid-area: aside-sec;
+	}
+
+	.footer {
+		background-color: lightgreen;
+		grid-area: footer;
+	}
+
+	.buttondemoBasicUsage section {
+		border-radius: 3px;
+		text-align: center;
+		margin: 1em;
+		position: relative !important;
+	}
+
+	md-button {
+		margin-top: 16px;
+		margin-bottom: 16px;
+	}
+
+	label {
+		position: absolute;
+		bottom: 5px;
+		left: 7px;
+		font-size: 14px;
+		opacity: 0.54;
+	}
+
+</style>
+
+<div class="wrapper">
+	<header class="header">
+		<md-nav-bar
+				md-no-ink-bar="disableInkBar"
+				md-selected-nav-item="currentNavItem"
+				nav-bar-aria-label="navigation links">
+			<md-nav-item md-nav-click="goto('page1')" name="page1">
+				Page One
+			</md-nav-item>
+			<md-nav-item md-nav-click="goto('page2')" name="page2" ng-disabled="secondTabDisabled">
+				Page Two
+			</md-nav-item>
+			<md-nav-item md-nav-click="goto('page3')" name="page3">
+				Page Three
+			</md-nav-item>
+			<md-nav-item md-nav-click="goto('page4')" name="page4">
+				Page Four
+			</md-nav-item>
+		</md-nav-bar>
+
+	</header>
+	<main class="main">MAIN
+		<div ui-view></div>
+		<md-button class="md-raised md-primary">Primary</md-button>
+	</main>
+	<aside class="sidebar">SIDEBAR</aside>
+	<aside class="aside-main">ASIDE-MAIN</aside>
+	<aside class="aside-sec">ASIDE-SEC</aside>
+	<footer class="footer">FOOTER</footer>
+</div>
