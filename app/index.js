@@ -4,5 +4,6 @@ angular
         'ngAnimate',
         'toastr',
         'ngMaterial',
-        'ngMessages'
+        'ngMessages',
+        'app.uxComponent'
     ]);

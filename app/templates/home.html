@@ -3,7 +3,7 @@
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-gap: .5em;
-		height: 100vh;
+		height: 80vh;
 		grid-template-areas:
 				"sidebar-right"
 				"sidebar-left"
@@ -15,7 +15,7 @@
 	@media (min-width: 767px) and (orientation: landscape) {
 		.wrapper-home {
 			grid-template-columns: repeat(6, 1fr);
-			grid-template-rows: 2fr .5fr .5fr .5fr .5fr;
+			grid-template-rows: 1fr .5fr;
 			grid-template-areas:
 					"sidebar-left  main        main        main       main       sidebar-right"
 					"sidebar-left  aside-main  aside-main  aside-sec  aside-sec  sidebar-right"

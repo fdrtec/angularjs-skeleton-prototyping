@@ -2,8 +2,8 @@
 	.wrapper-main {
 		display: grid;
 		grid-template-columns: 1fr;
+		grid-template-rows: .1fr 0fr .1fr;
 		grid-gap: .5em;
-		height: 100vh;
 		grid-template-areas:
 				"header"
 				"context"
@@ -13,7 +13,7 @@
 	@media (min-width: 767px) and (orientation: landscape) {
 		.wrapper-main {
 			grid-template-columns: repeat(6, 1fr);
-			grid-template-rows: .5fr 2fr .5fr .5fr .5fr;
+			grid-template-rows: .1fr 0fr .1fr;
 			grid-template-areas:
 					"header   header   header   header   header   header"
 			        "context  context  context  context  context  context"
@@ -21,7 +21,7 @@
 		}
 	}
 
-	header {
+	dashboard-header {
 		background-color: skyblue;
 		grid-area: header;
 	}
@@ -30,18 +30,14 @@
 		grid-area: context;
 	}
 
-	footer {
+	dashboard-footer {
 		background-color: lightgreen;
 		grid-area: footer;
 	}
-
 </style>
 
 <div class="wrapper-main">
-	<header>HEADER
-		<a ui-sref="home">Home</a>
-	</header>
+	<dashboard-header></dashboard-header>
 	<div class="context" ui-view></div>
-
-	<footer>FOOTER</footer>
+	<dashboard-footer></dashboard-footer>
 </div>
