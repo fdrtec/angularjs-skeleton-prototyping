@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0781559d-2719-474c-930e-7c4e73001710" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/ux-component/dashboard/home/dashboard-home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/ux-component/dashboard/home/dashboardHomeComponent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/ux-component/dashboard/main/dashboard-main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/ux-component/dashboard/main/dashboardMainComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ux-component/dashboard/about/dashboard-about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ux-component/dashboard/about/dashboardAboutComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/appController.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/config/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ux-component/dashboard/header/dashboardHeaderComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/ux-component/dashboard/header/dashboardHeaderComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ux-component/dashboard/header/dashboard-header.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/ux-component/dashboard/header/dashboard-header.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,17 +40,18 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.15.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/ux-component/dashboard" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/ux-component/dashboard" />
+      <recent name="$PROJECT_DIR$/app" />
     </key>
   </component>
   <component name="RunManager">
@@ -104,7 +102,8 @@
       <workItem from="1579088388916" duration="4697000" />
       <workItem from="1579133916011" duration="8390000" />
       <workItem from="1579304597161" duration="11928000" />
-      <workItem from="1579354198235" duration="7242000" />
+      <workItem from="1579354198235" duration="7613000" />
+      <workItem from="1579365720978" duration="1982000" />
     </task>
     <servers />
   </component>
