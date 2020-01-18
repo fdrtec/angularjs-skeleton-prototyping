@@ -14,9 +14,5 @@
         let self = this;
 
         self.title = 'Header of DashBoard'
-
     }
-
-
-
 }());

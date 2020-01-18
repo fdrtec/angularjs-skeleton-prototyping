@@ -6,11 +6,11 @@ angular
             $stateProvider
                 .state('main', {
                     url: '/',
-                    templateUrl: '../templates/main.html'
+                    template: '<dashboard-main></dashboard-main>'
                 })
                 .state('home', {
                     url: 'home',
                     parent:'main',
-                    templateUrl: '../templates/home.html'
+                    template: '<dashboard-home></dashboard-home>'
                 })
         }]);

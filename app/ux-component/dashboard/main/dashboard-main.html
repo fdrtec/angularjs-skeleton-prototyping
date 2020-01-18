@@ -16,7 +16,7 @@
 			grid-template-rows: .1fr 0fr .1fr;
 			grid-template-areas:
 					"header   header   header   header   header   header"
-			        "context  context  context  context  context  context"
+					"context  context  context  context  context  context"
 					"footer   footer   footer   footer   footer   footer"
 		}
 	}
@@ -26,7 +26,7 @@
 		grid-area: header;
 	}
 
-	.context {
+	ui-view {
 		grid-area: context;
 	}
 
@@ -38,6 +38,6 @@
 
 <div class="wrapper-main">
 	<dashboard-header></dashboard-header>
-	<div class="context" ui-view></div>
+	<ui-view></ui-view>
 	<dashboard-footer></dashboard-footer>
 </div>

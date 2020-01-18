@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0781559d-2719-474c-930e-7c4e73001710" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/ux-component/dashboard/footer/dashboard-footer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/ux-component/dashboard/footer/dashboardFooterComponent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/ux-component/dashboard/header/dashboard-header.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/ux-component/dashboard/header/dashboardHeaderComponent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/ux-component/module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ux-component/dashboard/home/dashboard-home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ux-component/dashboard/home/dashboardHomeComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ux-component/dashboard/main/dashboard-main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ux-component/dashboard/main/dashboardMainComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/home.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ux-component/dashboard/header/dashboardHeaderComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/ux-component/dashboard/header/dashboardHeaderComponent.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +104,7 @@
       <workItem from="1579088388916" duration="4697000" />
       <workItem from="1579133916011" duration="8390000" />
       <workItem from="1579304597161" duration="11928000" />
-      <workItem from="1579354198235" duration="4437000" />
+      <workItem from="1579354198235" duration="7242000" />
     </task>
     <servers />
   </component>
