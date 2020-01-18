@@ -4,9 +4,13 @@ angular
         function ($stateProvider, $urlRouterProvider) {
             $urlRouterProvider.otherwise('/');
             $stateProvider
-                .state('home', {
+                .state('main', {
                     url: '/',
                     templateUrl: '../templates/main.html'
                 })
-
+                .state('home', {
+                    url: 'home',
+                    parent:'main',
+                    templateUrl: '../templates/home.html'
+                })
         }]);
