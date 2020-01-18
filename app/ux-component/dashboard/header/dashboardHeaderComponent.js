@@ -8,11 +8,16 @@
             bindings: {},
         }).controller('dashboardHeaderCtrl', Controller);
 
-    Controller.$inject = [];
+    Controller.$inject = ['$state'];
 
-    function Controller() {
+    function Controller($state) {
         let self = this;
 
-        self.title = 'Header of DashBoard'
+        self.title = 'Header of DashBoard';
+        self.go = go;
+
+        function go(state) {
+            $state.go(state);
+        };
     }
 }());
