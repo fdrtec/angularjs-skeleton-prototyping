@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "gulp",
     "production": "cross-env NODE_ENV=production webpack --progress -p",
-    "start": "cross-env NODE_ENV=production webpack --progress -p"
+    "start": "gulp"
   },
   "repository": {
     "type": "git",
