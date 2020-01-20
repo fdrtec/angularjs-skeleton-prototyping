@@ -11,14 +11,3 @@ if (util.env.production) {
 } else {
     gulp.task('default', gulp.series('deps','app','server'))
 }
-
-
-
-
-
-
-
-
-//gulp.task('default', gulp.series('deps','app', 'server'));
-
-

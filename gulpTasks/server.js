@@ -1,5 +1,6 @@
 const gulp = require('gulp');
-const webserver = require('gulp-webserver');
+//const webserver = require('gulp-webserver');
+const browserSync = require('browser-sync').create();
 
 gulp.task('watch', () => {
     gulp.watch('app/**/*.html', gulp.parallel('app.html'));
@@ -8,13 +9,21 @@ gulp.task('watch', () => {
     gulp.watch('app/**/*.*', gulp.parallel('app.assets'));
 });
 
-gulp.task('start.server', () => {
-    return gulp.src('public')
-        .pipe(webserver({
-            livereload: true,
-            port: 3000,
-            open: true
-        }));
+// gulp.task('start.server', () => {
+//     return gulp.src('public')
+//         .pipe(webserver({
+//             livereload: true,
+//             port: 3000,
+//             open: true
+//         }));
+// });
+
+gulp.task('start.server', function() {
+    browserSync.init({
+        server: {
+            baseDir: 'public'
+        }
+    })
 });
 
 gulp.task('server', gulp.series('start.server', 'watch'));
