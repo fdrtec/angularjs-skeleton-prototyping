@@ -1,0 +1,35 @@
+<style>.wrapper-main {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: .1fr 0fr .1fr;
+		grid-gap: .5em;
+		grid-template-areas:
+				"header"
+				"context"
+				"footer"
+	}
+
+	@media (min-width: 767px) and (orientation: landscape) {
+		.wrapper-main {
+			grid-template-columns: repeat(6, 1fr);
+			grid-template-rows: .1fr 0fr .1fr;
+			grid-template-areas:
+					"header   header   header   header   header   header"
+					"context  context  context  context  context  context"
+					"footer   footer   footer   footer   footer   footer"
+		}
+	}
+
+	dashboard-header {
+		background-color: skyblue;
+		grid-area: header;
+	}
+
+	ui-view {
+		grid-area: context;
+	}
+
+	dashboard-footer {
+		background-color: lightgreen;
+		grid-area: footer;
+	}</style><div class="wrapper-main"><dashboard-header></dashboard-header><ui-view></ui-view><dashboard-footer></dashboard-footer></div>

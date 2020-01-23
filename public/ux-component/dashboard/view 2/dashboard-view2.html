@@ -1,0 +1,47 @@
+<style>.wrapper-view2 {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: .5em;
+		height: 80vh;
+		grid-template-areas:
+				"sidebar-right"
+				"sidebar-left"
+				"main"
+				"aside-main"
+				"aside-sec"
+	}
+
+	@media (min-width: 767px) and (orientation: landscape) {
+		.wrapper-view2 {
+			grid-template-columns: repeat(6, 1fr);
+			grid-template-rows: 1fr .5fr;
+			grid-template-areas:
+					"sidebar-left  main        main        main       main       sidebar-right"
+					"sidebar-left  aside-main  aside-main  aside-sec  aside-sec  sidebar-right"
+		}
+	}
+
+	.main {
+		background-color: coral;
+		grid-area: main;
+	}
+
+	.sidebar-left {
+		background-color: darkcyan;
+		grid-area: sidebar-left;
+	}
+
+	.sidebar-right {
+		background-color: royalblue;
+		grid-area: sidebar-right;
+	}
+
+	.aside-main {
+		background-color: purple;
+		grid-area: aside-main;
+	}
+
+	.aside-sec {
+		background-color: purple;
+		grid-area: aside-sec;
+	}</style><div class="wrapper-view2"><aside class="sidebar-left">SIDEBAR-LEFT</aside><main class="main">{{$ctrl.title}}<md-button class="md-raised md-primary">Primary</md-button></main><aside class="sidebar-right">SIDEBAR-RIGHT</aside><aside class="aside-main">ASIDE-MAIN</aside><aside class="aside-sec">ASIDE-SEC</aside></div>
