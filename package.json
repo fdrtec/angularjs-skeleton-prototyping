@@ -4,10 +4,7 @@
   "description": "Esqueleto para protipagem com angularjs",
   "main": "index.js",
   "scripts": {
-    "dev": "gulp",
-    "production": "cross-env NODE_ENV=production webpack --progress -p",
-    "start": "gulp",
-    "build-prod": "cross-env NODE_ENV=production webpack  --config webpack.config.js"
+    "dev": "gulp"
   },
   "repository": {
     "type": "git",
@@ -44,7 +41,6 @@
     "run-sequence": "2.2.1"
   },
   "dependencies": {
-    "cross-env": "^6.0.3",
     "express": "^4.17.1"
   }
 }

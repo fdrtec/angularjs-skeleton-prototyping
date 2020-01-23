@@ -16,7 +16,6 @@
         const self = this;
 
         self.title = 'About of Dashboard'
-
     }
 
 }());
