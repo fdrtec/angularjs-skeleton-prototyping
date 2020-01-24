@@ -4,8 +4,7 @@
   "description": "Esqueleto para protipagem com angularjs",
   "main": "index.js",
   "scripts": {
-    "dev": "gulp",
-    "production": "gulp --production"
+    "dev": "gulp"
   },
   "repository": {
     "type": "git",
@@ -18,7 +17,7 @@
   },
   "homepage": "https://github.com/fdrtec/angularjs-skeleton-prototyping#readme",
   "devDependencies": {
-    "@babel/core": "7.7.7",
+    "@babel/core": "7.8.3",
     "angular": "1.7.9",
     "angular-animate": "1.7.9",
     "angular-aria": "1.7.9",
@@ -27,7 +26,8 @@
     "angular-toastr": "2.1.1",
     "angular-ui-router": "1.0.24",
     "babel-preset-env": "1.7.0",
-    "bootstrap": "4.4.1",
+    "bootstrap": "^4.4.1",
+    "browser-sync": "^2.26.7",
     "font-awesome": "4.7.0",
     "gulp": "4.0.2",
     "gulp-babel": "8.0.0",
@@ -36,9 +36,11 @@
     "gulp-uglify": "3.0.2",
     "gulp-uglifycss": "1.1.0",
     "gulp-util": "3.0.8",
-    "gulp-webserver": "0.9.1",
     "jquery": "3.4.1",
     "popper.js": "1.16.0",
     "run-sequence": "2.2.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
