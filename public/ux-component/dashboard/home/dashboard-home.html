@@ -1,12 +1,19 @@
-<style>.wrapper-home {
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-gap: .5em;
-		height: 80vh;
-		grid-template-areas: "sidebar-right" "sidebar-left" "main" "aside-main" "aside-sec"
+<style>@media(min-width: 320px) {
+		.wrapper-home {
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-gap: .5em;
+			height: 80vh;
+			grid-template-areas:
+					"sidebar-right"
+					"sidebar-left"
+					"main"
+					"aside-main"
+					"aside-sec"
+		}
 	}
 
-	@media only screen and (min-width: 768px) {
+	@media(min-width: 641px) {
 		/* For tablets: */
 		.wrapper-home {
 			grid-template-columns: repeat(5, 1fr);
@@ -18,7 +25,7 @@
 
 	}
 
-	@media only screen and (min-width: 992px) {
+	@media(min-width: 961px) {
 		/* For desktop: */
 			.wrapper-home {
 				grid-template-columns: repeat(6, 1fr);
@@ -27,17 +34,7 @@
 						"sidebar-left  main        main        main       main       sidebar-right"
 						"sidebar-left  aside-main  aside-main  aside-sec  aside-sec  sidebar-right"
 			}
-
 	}
-
-
-	/*@media (min-width: 767px) and (orientation: landscape) {*/
-	/*	.wrapper-home {*/
-	/*		grid-template-columns: repeat(6, 1fr);*/
-	/*		grid-template-rows: 1fr .5fr;*/
-	/*		grid-template-areas: "sidebar-left  main        main        main       main       sidebar-right" "sidebar-left  aside-main  aside-main  aside-sec  aside-sec  sidebar-right"*/
-	/*	}*/
-	/*}*/
 
 	.main {
 		background-color: coral;
