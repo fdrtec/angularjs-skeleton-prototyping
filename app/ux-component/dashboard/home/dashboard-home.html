@@ -54,10 +54,29 @@
 
 </style>
 <div class="wrapper-home">
+	<md-sidenav class="md-sidenav-left" md-component-id="left" md-disable-backdrop="" md-whiteframe="4">
+		<md-toolbar class="md-theme-indigo" layout="row" layout-align="center center">
+			<md-button class="md-icon-button"
+			           aria-label="Menu"
+			           ng-click=$ctrl.toggleLeft()>
+				<md-icon class="material-icons">menu</md-icon>
+			</md-button>
+			<h1 class="md-toolbar-tools">Menu</h1>
+		</md-toolbar>
+		<md-content layout-margin="">
+			<p>
+				Mágica do Material, disponibilizamos o controller para chamar
+				sidenav no component header, porém temos template individual para
+				declarado em cada state.
+			</p>
+		</md-content>
+	</md-sidenav>
 	<aside class="sidebar-left">SIDEBAR-LEFT</aside>
 	<main class="main">
 		{{$ctrl.title}}
-		<md-button class="md-raised md-primary">Primary</md-button>
+		<md-button class="md-fab md-primary" aria-label="Use Android">
+			<md-icon class="material-icons">new_releases</md-icon>
+		</md-button>
 	</main>
 	<aside class="sidebar-right">SIDEBAR-RIGHT</aside>
 	<aside class="aside-main">ASIDE-MAIN</aside>

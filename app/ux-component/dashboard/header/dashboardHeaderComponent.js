@@ -8,16 +8,21 @@
             bindings: {},
         }).controller('dashboardHeaderCtrl', Controller);
 
-    Controller.$inject = ['$state'];
+    Controller.$inject = ['$state', '$mdSidenav'];
 
-    function Controller($state) {
+    function Controller($state, $mdSidenav) {
         let self = this;
 
         self.title = 'Header of DashBoard';
         self.go = go;
+        self.toggleLeft = toggleLeft;
 
         function go(state) {
             $state.go(state);
         };
+
+        function toggleLeft (){
+            $mdSidenav('left').toggle();
+        }
     }
 }());

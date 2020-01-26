@@ -10,13 +10,17 @@
         })
         .controller('dashboardHomeCtrl', Controller);
 
-    Controller.$inject = [];
+    Controller.$inject = ['$mdSidenav'];
 
-    function Controller() {
+    function Controller($mdSidenav) {
         const self = this;
 
-        self.title = 'Home of Dashboard'
+        self.title = 'Home of Dashboard';
+        self.toggleLeft = toggleLeft;
+
+        function toggleLeft (){
+            $mdSidenav('left').toggle();
+        }
 
     }
-
 }());

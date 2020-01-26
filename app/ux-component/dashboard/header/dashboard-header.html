@@ -1,6 +1,12 @@
 <header ng-cloak>
 	<md-toolbar class="md-primary">
 		<div class="md-toolbar-tools">
+			<md-button class="md-icon-button"
+			           aria-label="Menu"
+			           ng-click=$ctrl.toggleLeft()>
+				<md-icon class="material-icons">menu</md-icon>
+			</md-button>
+
 			<h2>[Logo] Nome da Empresa</h2>
 			<span flex></span>
 			<md-nav-bar
