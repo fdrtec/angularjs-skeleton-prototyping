@@ -28,7 +28,7 @@ gulp.task('app.js', () => {
 
 gulp.task('app.assets', () => {
     return gulp.src('assets/**/*.*')
-        .pipe(gulp.src('public/assets'));
+        .pipe(gulp.dest('public/assets'));
 });
 
 

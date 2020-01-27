@@ -11,9 +11,12 @@
 	@media (min-width: 641px) {
 		/* For tablets: */
 		.wrapper-home {
-			grid-template-columns: repeat(5, 1fr);
-			grid-template-rows: 1fr .3fr;
-			grid-template-areas: "sidebar-left  main       main        main      main" "sidebar-right aside-main aside-main  aside-sec aside-sec"
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: 0.5fr 0.3fr .3fr;
+			grid-template-areas:
+					"sidebar-left  main          main          main"
+					"sidebar-left  sidebar-right sidebar-right sidebar-right"
+					"aside-main    aside-main    aside-sec     aside-sec"
 		}
 	}
 
@@ -21,14 +24,14 @@
 		/* For desktop: */
 		.wrapper-home {
 			grid-template-columns: repeat(6, 1fr);
-			grid-template-rows: 1fr .5fr;
+			grid-template-rows: .9fr .2fr;
 			grid-template-areas: "sidebar-left  main        main        main       main       sidebar-right" "sidebar-left  aside-main  aside-main  aside-sec  aside-sec  sidebar-right"
 		}
 	}
 
 	.main {
-		background-color: coral;
 		grid-area: main;
+		overflow: hidden;
 	}
 
 	.sidebar-left {
@@ -49,4 +52,9 @@
 	.aside-sec {
 		background-color: purple;
 		grid-area: aside-sec;
-	}</style><div class="wrapper-home"><md-sidenav class="md-sidenav-left" md-component-id="left" md-disable-backdrop="" md-whiteframe="4"><md-toolbar class="md-theme-indigo" layout="row" layout-align="center center"><md-button class="md-icon-button" aria-label="Menu" ng-click="$ctrl.toggleLeft()"><md-icon class="material-icons">menu</md-icon></md-button><h1 class="md-toolbar-tools">Menu</h1></md-toolbar><md-content layout-margin=""><p>Mágica do Material, disponibilizamos o controller para chamar sidenav no component header, porém temos template individual para declarado em cada state.</p></md-content></md-sidenav><aside class="sidebar-left">SIDEBAR-LEFT</aside><main class="main"><ui-carousel slides="$ctrl.slides" slides-to-show="1" slides-to-scroll="1" initial-slide="1" autoplay="true" autoplay-speed="4000" dots="true"><carousel-item><img src="{{ item.image }}"></carousel-item><carousel-prev><!-- placed your previous button here --> <button>Prev</button><!-- end --></carousel-prev><carousel-next><!-- placed your next button here --> <button>Next</button><!-- end --></carousel-next></ui-carousel></main><aside class="sidebar-right"><md-button class="md-fab md-primary" aria-label="news"><md-icon class="material-icons">new_releases</md-icon></md-button></aside><aside class="aside-main">ASIDE-MAIN</aside><aside class="aside-sec">ASIDE-SEC</aside></div>
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}</style><div class="wrapper-home"><md-sidenav class="md-sidenav-left" md-component-id="left" md-disable-backdrop="" md-whiteframe="4"><md-toolbar class="md-theme-indigo" layout="row" layout-align="center center"><md-button class="md-icon-button" aria-label="Menu" ng-click="$ctrl.toggleLeft()"><md-icon class="material-icons">menu</md-icon></md-button><h1 class="md-toolbar-tools">Menu</h1></md-toolbar><md-content layout-margin=""><p>Mágica do Material, disponibilizamos o controller para chamar sidenav no component header, porém temos template individual para declarado em cada state.</p></md-content></md-sidenav><aside class="sidebar-left">SIDEBAR-LEFT</aside><main class="main"><ui-carousel slides="$ctrl.slides" slides-to-show="1" slides-to-scroll="1" initial-slide="1" autoplay="true" autoplay-speed="4000" dots="false"><carousel-item><picture><source media="(min-width: 320em)" srcset="{{ item }} 4x"><img src="{{ item }}" alt="image of Carossel"></picture></carousel-item><!--			<carousel-prev>--><!--				&lt;!&ndash; placed your previous button here &ndash;&gt;--><!--				<md-button class="md-raised md-primary">--><!--					Prev--><!--				</md-button>--><!--				&lt;!&ndash; end &ndash;&gt;--><!--			</carousel-prev>--><!--			<carousel-next>--><!--				&lt;!&ndash; placed your next button here &ndash;&gt;--><!--				<md-button class="md-icon-button" aria-label="More">--><!--					<md-icon class="material-icons">new_releases</md-icon>--><!--				</md-button>--><!--				&lt;!&ndash; end &ndash;&gt;--><!--			</carousel-next>--></ui-carousel></main><aside class="sidebar-right"><md-button class="md-fab md-primary" aria-label="news"><md-icon class="material-icons">new_releases</md-icon></md-button></aside><aside class="aside-main">ASIDE-MAIN</aside><aside class="aside-sec">ASIDE-SEC</aside></div>
