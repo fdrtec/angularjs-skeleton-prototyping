@@ -73,12 +73,38 @@
 	</md-sidenav>
 	<aside class="sidebar-left">SIDEBAR-LEFT</aside>
 	<main class="main">
-		{{$ctrl.title}}
-		<md-button class="md-fab md-primary" aria-label="Use Android">
+		<ui-carousel
+				slides="$ctrl.slides"
+				slides-to-show="1"
+				slides-to-scroll="1"
+				initial-slide="1"
+				autoplay="true"
+				autoplay-speed="4000"
+				dots="true">
+
+			<carousel-item>
+				 <img src="{{ item.image }}"/>
+			</carousel-item>
+
+			<carousel-prev>
+				<!-- placed your previous button here -->
+				<button>Prev</button>
+				<!-- end -->
+			</carousel-prev>
+
+			<carousel-next>
+				<!-- placed your next button here -->
+				<button>Next</button>
+				<!-- end -->
+			</carousel-next>
+		</ui-carousel>
+
+	</main>
+	<aside class="sidebar-right">
+		<md-button class="md-fab md-primary" aria-label="news">
 			<md-icon class="material-icons">new_releases</md-icon>
 		</md-button>
-	</main>
-	<aside class="sidebar-right">SIDEBAR-RIGHT</aside>
+	</aside>
 	<aside class="aside-main">ASIDE-MAIN</aside>
 	<aside class="aside-sec">ASIDE-SEC</aside>
 </div>

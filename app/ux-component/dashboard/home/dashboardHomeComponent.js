@@ -22,5 +22,21 @@
             $mdSidenav('left').toggle();
         }
 
+        self.myInterval = 3000;
+        self.slides = [
+            {
+                image: 'http://lorempixel.com/400/200/food'
+            },
+            {
+                image: 'http://lorempixel.com/400/200/sports'
+            },
+            {
+                image: 'http://lorempixel.com/400/200/people'
+            },
+            {
+                image: 'public/assets/images/19858.jpg'
+            }
+        ];
+
     }
 }());
