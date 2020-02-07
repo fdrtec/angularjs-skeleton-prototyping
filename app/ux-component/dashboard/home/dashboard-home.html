@@ -92,7 +92,8 @@
 
 			<carousel-item>
 				<picture>
-					<source media="(min-width: 320em)" srcset="{{ item }} 4x">
+					<source media="(min-width: 320em)" srcset="{{ item }} .5x">
+					<source media="(min-width: 1025em)" srcset="{{ item }} 4x">
 					<img src="{{ item }}" alt="image of Carossel">
 				</picture>
 			</carousel-item>
