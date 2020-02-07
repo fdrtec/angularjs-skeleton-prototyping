@@ -3,7 +3,7 @@ const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const uglifycss = require('gulp-uglifycss');
 
-gulp.task('deps.js',() => {
+gulp.task('deps.js', () => {
     return gulp.src([
         'node_modules/angular/angular.min.js',
         'node_modules/angular-material/angular-material.min.js',
@@ -12,8 +12,7 @@ gulp.task('deps.js',() => {
         'node_modules/angular-messages/angular-messages.min.js',
         'node_modules/angular-ui-router/release/angular-ui-router.min.js',
         'node_modules/angular-toastr/dist/angular-toastr.tpls.min.js',
-        // 'node_modules/jquery/dist/jquery.min.js',
-        // 'node_modules/bootstrap/dist/js/bootstrap.min.js'
+        'node_modules/angular-ui-carousel/dist/ui-carousel.min.js'
     ])
         .pipe(uglify())
         .pipe(concat('deps.min.js'))
@@ -23,9 +22,8 @@ gulp.task('deps.js',() => {
 gulp.task('deps.css', () => {
     return gulp.src([
         'node_modules/angular-material/angular-material.min.css',
-        'node_modules/angular-toastr/dist/angular-toastr.min.css'
-        //'node_modules/font-awesome/css/font-awesome.min.css',
-        // 'node_modules/bootstrap/dist/css/bootstrap.min.css',
+        'node_modules/angular-toastr/dist/angular-toastr.min.css',
+        'node_modules/angular-ui-carousel/dist/ui-carousel.min.css'
     ])
         .pipe(uglifycss({'uglyComments': true}))
         .pipe(concat('deps.min.css'))
@@ -34,7 +32,7 @@ gulp.task('deps.css', () => {
 });
 gulp.task('deps.fonts', () => {
     return gulp.src([
-        'node_modules/font-awesome/fonts/*.*',
+        'node_modules/angular-ui-carousel/dist/fonts/*'
     ])
         .pipe(gulp.dest('public/assets/fonts'));
 });

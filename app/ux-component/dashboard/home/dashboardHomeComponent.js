@@ -1,5 +1,5 @@
 (function () {
-    'use strict'
+    'use strict';
 
     angular
         .module('app.uxComponent')
@@ -22,5 +22,14 @@
             $mdSidenav('left').toggle();
         }
 
+        self.myInterval = 3000;
+        self.slides = [
+            '../assets/images/img-1.jpeg',
+            '../assets/images/img-2.jpeg',
+            '../assets/images/img-3.jpeg',
+            '../assets/images/img-4.jpeg',
+            '../assets/images/img-5.jpeg',
+            '../assets/images/img-6.jpeg',
+        ];
     }
 }());

@@ -28,8 +28,10 @@ gulp.task('app.js', () => {
 
 gulp.task('app.assets', () => {
     return gulp.src('assets/**/*.*')
-        .pipe(gulp.src('public/assets'));
+        .pipe(gulp.dest('public/assets'));
 });
+
+
 
 gulp.task('app', gulp.series('app.html', 'app.css', 'app.js', 'app.assets'));
 

@@ -5,5 +5,6 @@ angular
         'toastr',
         'ngMaterial',
         'ngMessages',
-        'app.uxComponent'
+        'app.uxComponent',
+        'ui.carousel'
     ]);
