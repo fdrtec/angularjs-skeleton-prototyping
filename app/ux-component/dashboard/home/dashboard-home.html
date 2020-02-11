@@ -62,11 +62,13 @@
 	.aside-main {
 		background-color: purple;
 		grid-area: aside-main;
+		color:floralwhite;
 	}
 
 	.aside-sec {
 		background-color: purple;
 		grid-area: aside-sec;
+		color: floralwhite;
 	}
 
 	img {
@@ -75,7 +77,7 @@
 	}
 
 </style>
-<div class="wrapper-home">
+<div class="wrapper-home"  layout-align="space-between none">
 	<md-sidenav class="md-sidenav-left" md-component-id="left" md-disable-backdrop="" md-whiteframe="4">
 		<md-toolbar class="md-theme-indigo" layout="row" layout-align="center center">
 			<md-button class="md-icon-button"
@@ -137,6 +139,11 @@
 			<md-icon class="material-icons">new_releases</md-icon>
 		</md-button>
 	</aside>
-	<aside class="aside-main">ASIDE-MAIN</aside>
-	<aside class="aside-sec">ASIDE-SEC</aside>
+	<aside class="aside-main md-title" layout-padding>
+		SPA com AngularJS responsivo usando grid layout
+	</aside>
+	<aside class="aside-sec md-title" layout-padding>
+		Estrutura preparada para receber componentes
+		gráficos do Material Design
+	</aside>
 </div>
