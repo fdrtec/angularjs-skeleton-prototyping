@@ -9,7 +9,7 @@
 				"footer"
 	}
 
-	@media (min-width: 767px) and (orientation: landscape) {
+	@media (min-width: 320px) {
 		.wrapper-main {
 			grid-template-columns: repeat(6, 1fr);
 			grid-template-rows: .1fr 0fr .1fr;
@@ -32,4 +32,4 @@
 	dashboard-footer {
 		background-color: lightgreen;
 		grid-area: footer;
-	}</style><div class="wrapper-main"><dashboard-header></dashboard-header><ui-view></ui-view><dashboard-footer></dashboard-footer></div>
+	}</style><md-content class="wrapper-main"><dashboard-header></dashboard-header><ui-view></ui-view><dashboard-footer></dashboard-footer></md-content>

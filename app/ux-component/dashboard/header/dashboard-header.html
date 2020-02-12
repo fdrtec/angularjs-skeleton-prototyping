@@ -7,22 +7,19 @@
 				<md-icon class="material-icons">menu</md-icon>
 			</md-button>
 
-			<h2>[Logo] Nome da Empresa</h2>
+			<h2 class="md-title" flex md-truncate>PROTOTIPAGEM COM ANGULAR JS</h2>
 			<span flex></span>
 			<md-nav-bar
+					class="md-primary"
+					md-no-ink-bar="disableInkBar"
 					md-selected-nav-item="currentNavItem"
 					nav-bar-aria-label="navigation links">
-
-				<md-nav-bar
-						md-no-ink-bar="disableInkBar"
-						md-selected-nav-item="currentNavItem"
-						nav-bar-aria-label="navigation links">
-					<md-nav-item md-nav-click="$ctrl.go('home')" name="home">
-						HOME
-					</md-nav-item>
-					<md-nav-item md-nav-click="$ctrl.go('about')" name="about" >
-						ABOUT
-					</md-nav-item>
+				<md-nav-item md-nav-click="$ctrl.go('home')" name="home">
+					HOME
+				</md-nav-item>
+				<md-nav-item md-nav-click="$ctrl.go('about')" name="about">
+					ABOUT
+				</md-nav-item>
 			</md-nav-bar>
 		</div>
 	</md-toolbar>
