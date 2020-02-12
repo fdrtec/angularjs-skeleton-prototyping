@@ -1,6 +1,6 @@
 <style>
 	.wrapper-home {
-		height: 100vh; /*height em 80vh distribui contéudo em 80% do espaço*/
+		height: 80vh; /*height em 80vh distribui contéudo em 80% do espaço*/
 		display: grid;
 		grid-gap: .5em;
 	}
@@ -10,25 +10,17 @@
 		/*For mobile*/
 		.wrapper-home {
 			grid-template-columns: 1fr;
-			grid-template-areas:
-					"sidebar-right"
-					"sidebar-left"
-					"main"
-					"aside-main"
-					"aside-sec"
+			grid-template-areas: "sidebar-right" "sidebar-left" "main" "aside-main" "aside-sec"
 		}
 	}
 
 	@media screen
-	and (min-width: 768px){
+	and (min-width: 768px) {
 		/* For tablets: */
 		.wrapper-home {
 			grid-template-columns: repeat(4, 1fr);
 			grid-template-rows: 0.5fr 0.3fr .3fr;
-			grid-template-areas:
-					"sidebar-left  main          main          main"
-					"sidebar-left  sidebar-right sidebar-right sidebar-right"
-					"aside-main    aside-main    aside-sec     aside-sec"
+			grid-template-areas: "sidebar-left  main          main          main" "sidebar-left  sidebar-right sidebar-right sidebar-right" "aside-main    aside-main    aside-sec     aside-sec"
 		}
 	}
 
@@ -38,9 +30,7 @@
 		.wrapper-home {
 			grid-template-columns: repeat(6, 1fr);
 			grid-template-rows: .9fr .2fr;
-			grid-template-areas:
-					"sidebar-left  main        main        main       main       sidebar-right"
-					"sidebar-left  aside-main  aside-main  aside-sec  aside-sec  sidebar-right"
+			grid-template-areas: "sidebar-left  main        main        main       main       sidebar-right" "sidebar-left  aside-main  aside-main  aside-sec  aside-sec  sidebar-right"
 		}
 	}
 
@@ -62,7 +52,7 @@
 	.aside-main {
 		background-color: black;
 		grid-area: aside-main;
-		color:floralwhite;
+		color: floralwhite;
 	}
 
 	.aside-sec {
@@ -77,9 +67,14 @@
 	}
 
 </style>
-<md-content class="wrapper-home">
+<div class="wrapper-home">
 	<md-sidenav class="md-sidenav-left" md-component-id="left" md-disable-backdrop="" md-whiteframe="4">
 		<md-toolbar class="md-theme-indigo" layout="row" layout-align="center center">
+			<md-button class="md-icon-button"
+			           aria-label="Menu"
+			           ng-click=$ctrl.toggleLeft()>
+				<md-icon class="material-icons">menu</md-icon>
+			</md-button>
 			<h1 class="md-toolbar-tools">Menu</h1>
 		</md-toolbar>
 		<md-content layout-margin>
@@ -141,4 +136,4 @@
 		<p>Estrutura preparada para receber componentes
 			gráficos do Material Design</p>
 	</md-whiteframe>
-</md-content>
+</div>
