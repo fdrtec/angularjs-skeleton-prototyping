@@ -10,12 +10,20 @@ angular
                 })
                 .state('home', {
                     url: 'home',
-                    parent:'main',
+                    parent: 'main',
                     template: '<dashboard-home></dashboard-home>'
                 })
                 .state('about', {
                     url: 'about',
-                    parent:'main',
+                    parent: 'main',
                     template: '<dashboard-about></dashboard-about>'
                 })
+                .state('materialDesign', {
+                    url: 'material-design',
+                    parent: 'main',
+                    template: '<dashboard-md><dashboard-md>'
+
+
+                })
+
         }]);

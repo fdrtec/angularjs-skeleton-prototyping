@@ -1,0 +1,37 @@
+<md-card md-theme="{{ showDarkTheme ? 'dark-blue' : 'default' }}" md-theme-watch>
+    <md-card-title>
+        <md-card-title-text>
+            <span class="md-headline">Testes com os componentes do Angular Material</span>
+            <span class="md-subhead">Dicas tiradas da playlist de <a target="_blank"
+                                                                     href="https://www.youtube.com/watch?v=1SQZl5raVvY&list=PLxktx98zP3aA4VCSfN9QaIqC7_lnyd2OC">
+        Eleftheria Batsou</span>
+        </md-card-title-text>
+    </md-card-title>
+</md-card>
+
+<md-card>
+    <md-card-content>
+        <md-input-container class="md-block">
+            <label>Name</label>
+            <input ng-model="$ctrl.user.name">
+        </md-input-container>
+        <md-input-container class="md-block">
+            <label>Email</label>
+            <input type="email" ng-model="$ctrl.user.email">
+        </md-input-container>
+    </md-card-content>
+</md-card>
+<md-card layout-margin>
+    <md-card-title-text>
+        <span class="md-subhead">User Data</span>
+    </md-card-title-text>
+    <md-card-contant>
+        <p class="md-body-1">Name : {{$ctrl.user.name}}</p>
+        <p class="md-body-1">Email : {{$ctrl.user.email}}</p>
+    </md-card-contant>
+</md-card>
+
+
+
+
+
