@@ -14,6 +14,11 @@
 
     function Controller() {
         const self = this;
+        self.TITLE = {
+            COD3R: `Cod3r via Udemy `,
+            BRANAS: `Rodrigo Branas`
+        }
+
 
         self.title = "Components of Material Design"
         self.user = {}
